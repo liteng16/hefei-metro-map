@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>合肥地铁线路与站点分布图</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQPDblp6zEAGpc06fL7qC5e7eR5pmqM="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="map-shell">
+      <header class="topbar">
+        <div>
+          <h1>合肥地铁线路与站点分布图</h1>
+          <p>高德黑白底图 · GCJ-02</p>
+        </div>
+        <div class="toolbar">
+          <label class="search">
+            <span>搜索</span>
+            <input id="station-search" type="search" placeholder="站名" autocomplete="off" />
+          </label>
+          <button id="toggle-labels" type="button" aria-pressed="true">站名</button>
+          <button id="fit-map" type="button">全图</button>
+        </div>
+      </header>
+
+      <section id="map" aria-label="合肥地铁互动地图"></section>
+
+      <aside class="legend" aria-label="线路图例">
+        <div class="legend-title">线路</div>
+        <div id="line-filters" class="line-filters"></div>
+      </aside>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
